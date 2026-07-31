@@ -4,9 +4,155 @@
     --bianco: #F5F0E7;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: var(--blu-scuro);
     color: var(--bianco);
     font-family: Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 32px 5%;
+}
+
+.nome {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 45px;
+}
+
+nav a {
+    font-size: 15px;
+}
+
+/* PRIMA SCHERMATA */
+
+.hero {
+    min-height: calc(100vh - 85px);
+    padding: 90px 5% 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.posizione {
+    margin: 0 0 45px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    max-width: 1100px;
+    margin: 0;
+
+    font-size: clamp(55px, 7vw, 110px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+}
+
+.introduzione {
+    max-width: 720px;
+    margin: 40px 0 0;
+
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.competenze {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin: 40px 0;
+}
+
+.competenze span {
+    padding: 10px 16px;
+    border: 1px solid rgba(245, 240, 231, 0.5);
+}
+
+.pulsante {
+    width: 270px;
+    padding: 20px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--arancione);
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    transition: transform 0.2s ease;
+}
+
+.pulsante:hover {
+    transform: translateY(-4px);
+}
+
+/* SMARTPHONE */
+
+@media (max-width: 700px) {
+
+    .menu {
+        padding: 24px 20px;
+    }
+
+    .nome {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 20px 50px;
+    }
+
+    h1 {
+        font-size: 52px;
+        letter-spacing: -3px;
+    }
+
+    .introduzione {
+        font-size: 20px;
+    }
 }
