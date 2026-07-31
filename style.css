@@ -1,0 +1,12 @@
+:root {
+    --blu-scuro: #10002F;
+    --arancione: #FF5B19;
+    --bianco: #F5F0E7;
+}
+
+body {
+    margin: 0;
+    background-color: var(--blu-scuro);
+    color: var(--bianco);
+    font-family: Arial, sans-serif;
+}
