@@ -238,6 +238,18 @@ h1 {
     display: block;
     object-fit: cover;
 }
+.brainframe h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+.etichetta,
+.descrizione-brainframe,
+.informazioni-brainframe,
+.pulsante-brainframe {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+}
 /* SMARTPHONE */
 
 @media (max-width: 700px) {
