@@ -121,7 +121,122 @@ h1 {
 .pulsante:hover {
     transform: translateY(-4px);
 }
+/* SEZIONE BRAINFRAME */
 
+.brainframe {
+    min-height: 100vh;
+    padding: 7%;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: stretch;
+
+    background-image: url("assets/Sito/brainframe-background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #160064;
+}
+
+.brainframe-contenuto {
+    padding: 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: white;
+}
+
+.etichetta {
+    margin: 0 0 25px;
+
+    color: #160064;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.brainframe h2 {
+    margin: 0;
+
+    font-size: clamp(70px, 8vw, 135px);
+    line-height: 0.9;
+    letter-spacing: -7px;
+}
+
+.descrizione-brainframe {
+    max-width: 650px;
+    margin: 40px 0;
+
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.informazioni-brainframe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    margin-bottom: 50px;
+}
+
+.informazioni-brainframe span {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #6A6090;
+    font-size: 13px;
+}
+
+.informazioni-brainframe strong {
+    display: block;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.pulsante-brainframe {
+    width: 270px;
+    padding: 20px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #160064;
+    color: white;
+
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.pulsante-brainframe:hover {
+    transform: translateY(-4px);
+}
+
+.brainframe-logo {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #160064;
+    overflow: hidden;
+}
+
+.brainframe-logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+}
 /* SMARTPHONE */
 
 @media (max-width: 700px) {
