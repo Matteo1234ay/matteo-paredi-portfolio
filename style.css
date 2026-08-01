@@ -1492,3 +1492,13 @@ nav a {
         transition: none;
     }
 }
+/* Correzione copertina seconda card */
+
+@media (min-width: 901px) {
+
+    .card-video:nth-child(2) {
+        grid-template-columns:
+            minmax(320px, 0.65fr)
+            minmax(0, 1.35fr);
+    }
+}
