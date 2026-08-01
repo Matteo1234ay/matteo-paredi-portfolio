@@ -840,3 +840,47 @@ h1 {
         width: 48%;
     }
 }
+
+/* Correzione altezza composizione BrainFrame su desktop */
+
+@media (min-width: 701px) {
+
+    .introduzione-progetto {
+        min-height: auto;
+        padding-top: 90px;
+        padding-bottom: 90px;
+
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .composizione-brainframe {
+        width: 100%;
+        height: 520px;
+        min-height: 0;
+    }
+
+    .immagine-banner {
+        top: 30px;
+        right: 0;
+
+        width: 90%;
+        max-height: 290px;
+    }
+
+    .logo-cognitive {
+        bottom: 20px;
+        left: 5%;
+
+        width: 45%;
+        max-width: 260px;
+    }
+
+    .logo-blu {
+        right: 5%;
+        bottom: 10px;
+
+        width: 38%;
+        max-width: 220px;
+    }
+}
