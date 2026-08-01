@@ -2194,3 +2194,67 @@ nav a {
         transition: none;
     }
 }
+/* ==================================================
+   MENU BRAINFRAME SEMPRE VISIBILE
+   ================================================== */
+
+.menu-progetto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-bottom:
+        1px solid
+        rgba(23, 0, 107, 0.14);
+
+    box-shadow:
+        0 8px 30px
+        rgba(23, 0, 107, 0.08);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.ritorno-portfolio,
+.nome-progetto {
+    color: var(--brainframe-blu);
+}
+
+.ritorno-portfolio {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.ritorno-portfolio:hover {
+    opacity: 0.65;
+    transform: translateX(-5px);
+}
+
+
+/* Menu fisso su smartphone */
+
+@media (max-width: 700px) {
+
+    .menu-progetto {
+        padding:
+            18px
+            20px;
+
+        font-size: 12px;
+    }
+
+    .ritorno-portfolio {
+        gap: 7px;
+    }
+
+    .nome-progetto {
+        letter-spacing: 1.5px;
+    }
+}
