@@ -716,3 +716,119 @@ h1 {
 
     }
 }
+/* ==================================================
+   COMPOSIZIONE GRAFICA BRAINFRAME
+   ================================================== */
+
+.introduzione-progetto {
+    grid-template-columns: 80px minmax(320px, 0.9fr) minmax(320px, 0.7fr);
+    max-width: none;
+}
+
+.testo-introduzione {
+    position: relative;
+    z-index: 3;
+}
+
+.composizione-brainframe {
+    position: relative;
+    align-self: center;
+
+    width: 100%;
+    min-height: 650px;
+}
+
+.composizione-brainframe img {
+    position: absolute;
+    display: block;
+    object-fit: cover;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.6s cubic-bezier(.22, 1, .36, 1),
+        box-shadow 0.6s ease;
+}
+
+.immagine-banner {
+    top: 5%;
+    right: -8%;
+
+    width: 95%;
+    aspect-ratio: 16 / 9;
+
+    transform: rotate(5deg);
+}
+
+.logo-cognitive {
+    bottom: 4%;
+    left: 0;
+
+    width: 58%;
+    aspect-ratio: 1;
+    
+    transform: rotate(-7deg);
+}
+
+.logo-blu {
+    right: 1%;
+    bottom: 0;
+
+    width: 43%;
+    aspect-ratio: 1;
+
+    transform: rotate(8deg);
+}
+
+.composizione-brainframe:hover .immagine-banner {
+    transform: rotate(2deg) translateY(-15px);
+}
+
+.composizione-brainframe:hover .logo-cognitive {
+    transform: rotate(-3deg) translate(-10px, 10px);
+}
+
+.composizione-brainframe:hover .logo-blu {
+    transform: rotate(3deg) translate(12px, -15px);
+}
+
+.composizione-brainframe img:hover {
+    z-index: 5;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Composizione BrainFrame su smartphone */
+
+@media (max-width: 700px) {
+
+    .introduzione-progetto {
+        grid-template-columns: 1fr;
+    }
+
+    .composizione-brainframe {
+        min-height: 470px;
+        margin-top: 30px;
+    }
+
+    .immagine-banner {
+        top: 0;
+        right: -10%;
+
+        width: 105%;
+    }
+
+    .logo-cognitive {
+        bottom: 2%;
+        left: -4%;
+
+        width: 58%;
+    }
+
+    .logo-blu {
+        right: -3%;
+        bottom: 5%;
+
+        width: 48%;
+    }
+}
