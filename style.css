@@ -2003,3 +2003,194 @@ nav a {
         transition: none;
     }
 }
+/* ==================================================
+   ANIMAZIONE ANTEPRIMA BRAINFRAME NELLA HOME
+   ================================================== */
+
+.animazioni-attive .brainframe-contenuto {
+    opacity: 0;
+
+    clip-path:
+        inset(0 100% 0 0);
+
+    transform:
+        translateX(-90px);
+}
+
+.animazioni-attive .brainframe-logo {
+    opacity: 0;
+
+    clip-path:
+        inset(0 0 0 100%);
+
+    transform:
+        translateX(100px);
+}
+
+.animazioni-attive
+.brainframe.in-vista
+.brainframe-contenuto {
+    opacity: 1;
+
+    clip-path:
+        inset(0 0 0 0);
+
+    transform:
+        translateX(0);
+
+    transition:
+        opacity 0.8s ease,
+        clip-path 1.1s cubic-bezier(.22, 1, .36, 1),
+        transform 1.1s cubic-bezier(.22, 1, .36, 1);
+}
+
+.animazioni-attive
+.brainframe.in-vista
+.brainframe-logo {
+    opacity: 1;
+
+    clip-path:
+        inset(0 0 0 0);
+
+    transform:
+        translateX(0);
+
+    transition:
+        opacity 0.8s 0.15s ease,
+        clip-path 1.1s 0.15s cubic-bezier(.22, 1, .36, 1),
+        transform 1.1s 0.15s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* Elementi interni del pannello */
+
+.animazioni-attive
+.brainframe
+.brainframe-contenuto > * {
+    opacity: 0;
+    transform: translateY(35px);
+}
+
+.animazioni-attive
+.brainframe.in-vista
+.brainframe-contenuto > * {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.animazioni-attive
+.brainframe.in-vista
+.brainframe-contenuto > *:nth-child(1) {
+    transition-delay: 0.35s;
+}
+
+.animazioni-attive
+.brainframe.in-vista
+.brainframe-contenuto > *:nth-child(2) {
+    transition-delay: 0.45s;
+}
+
+.animazioni-attive
+.brainframe.in-vista
+.brainframe-contenuto > *:nth-child(3) {
+    transition-delay: 0.55s;
+}
+
+.animazioni-attive
+.brainframe.in-vista
+.brainframe-contenuto > *:nth-child(4) {
+    transition-delay: 0.65s;
+}
+
+.animazioni-attive
+.brainframe.in-vista
+.brainframe-contenuto > *:nth-child(5) {
+    transition-delay: 0.75s;
+}
+
+
+/* Movimento del logo BF */
+
+.brainframe-logo img {
+    transition:
+        transform
+        1s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+.brainframe-logo:hover img {
+    transform:
+        scale(1.06)
+        rotate(1deg);
+}
+
+
+/* ==================================================
+   COMPARSA DELLE CARD YOUTUBE
+   ================================================== */
+
+.animazioni-attive .card-video {
+    opacity: 0;
+
+    transform:
+        translateY(90px)
+        scale(0.96);
+}
+
+.animazioni-attive .card-video.in-vista {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    transition:
+        opacity 0.8s var(--ritardo-card, 0s) ease,
+        transform 1s var(--ritardo-card, 0s)
+        cubic-bezier(.22, 1, .36, 1),
+        box-shadow 0.5s ease;
+}
+
+
+/* Mantiene l'effetto hover dopo l'ingresso */
+
+.animazioni-attive .card-video.in-vista:hover {
+    transform:
+        translateY(-10px)
+        rotate(-0.35deg);
+}
+
+.animazioni-attive
+.card-video:nth-child(even).in-vista:hover {
+    transform:
+        translateY(-10px)
+        rotate(0.35deg);
+}
+
+
+/* ==================================================
+   ACCESSIBILITÀ
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .animazioni-attive .brainframe-contenuto,
+    .animazioni-attive .brainframe-logo,
+    .animazioni-attive
+    .brainframe
+    .brainframe-contenuto > *,
+    .animazioni-attive .card-video {
+        opacity: 1;
+        clip-path: none;
+        transform: none;
+        transition: none;
+    }
+
+    .brainframe-logo img {
+        transition: none;
+    }
+}
