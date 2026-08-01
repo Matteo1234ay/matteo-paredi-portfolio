@@ -1108,3 +1108,387 @@ nav a {
         transform: rotate(8deg);
     }
 }
+/* ==================================================
+   CARD DEI VIDEO YOUTUBE
+   ================================================== */
+
+.lavori-progetto {
+    min-height: auto;
+    padding: 110px 7%;
+
+    display: block;
+
+    background: var(--brainframe-blu);
+    color: var(--brainframe-bianco);
+
+    overflow: hidden;
+}
+
+
+/* Intestazione della sezione */
+
+.intestazione-lavori {
+    max-width: 1400px;
+    margin: 0 auto 80px;
+
+    display: grid;
+    grid-template-columns: 120px minmax(0, 900px);
+    gap: 60px;
+}
+
+.descrizione-lavori {
+    max-width: 700px;
+    margin: 0;
+
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+
+/* Elenco delle card */
+
+.griglia-video {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 50px;
+}
+
+.card-video {
+    min-height: 440px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(320px, 0.65fr);
+
+    background: var(--brainframe-bianco);
+    color: var(--brainframe-blu);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.5s cubic-bezier(.22, 1, .36, 1),
+        box-shadow 0.5s ease;
+}
+
+
+/* La seconda card alterna la disposizione */
+
+.card-video:nth-child(even) .card-video-immagine {
+    order: 2;
+}
+
+.card-video:nth-child(even) .card-video-informazioni {
+    order: 1;
+}
+
+
+/* Copertina */
+
+.card-video-immagine {
+    position: relative;
+
+    min-height: 440px;
+
+    overflow: hidden;
+
+    background: #0D003A;
+}
+
+.card-video-immagine::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(23, 0, 107, 0.05) 20%,
+            rgba(23, 0, 107, 0.65) 100%
+        );
+
+    transition: opacity 0.5s ease;
+}
+
+.card-video-immagine img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    transition:
+        transform
+        0.8s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* Numero e freccia sopra la copertina */
+
+.numero-video,
+.freccia-video {
+    position: absolute;
+    z-index: 3;
+
+    font-family: "Oswald", sans-serif;
+}
+
+.numero-video {
+    top: 25px;
+    left: 28px;
+
+    color: #FFFFFF;
+
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.freccia-video {
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #FFFFFF;
+    color: var(--brainframe-blu);
+
+    font-size: 27px;
+
+    transition:
+        transform 0.5s cubic-bezier(.22, 1, .36, 1),
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Informazioni del video */
+
+.card-video-informazioni {
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.card-video-informazioni h3 {
+    margin: 0;
+
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(42px, 4.5vw, 72px);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -2px;
+}
+
+.ruoli-video {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ruoli-video span {
+    padding: 10px 14px;
+
+    border: 1px solid
+        rgba(23, 0, 107, 0.35);
+
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+/* Animazioni al passaggio del mouse */
+
+.card-video:hover {
+    transform:
+        translateY(-10px)
+        rotate(-0.35deg);
+
+    box-shadow:
+        0 40px 100px
+        rgba(0, 0, 0, 0.34);
+}
+
+.card-video:nth-child(even):hover {
+    transform:
+        translateY(-10px)
+        rotate(0.35deg);
+}
+
+.card-video:hover .card-video-immagine img {
+    transform: scale(1.08);
+}
+
+.card-video:hover .card-video-immagine::after {
+    opacity: 0.7;
+}
+
+.card-video:hover .freccia-video {
+    transform:
+        translate(5px, -5px)
+        rotate(8deg);
+
+    background: var(--brainframe-blu);
+    color: #FFFFFF;
+}
+
+
+/* Pulsante per il canale */
+
+.pulsante-canale {
+    max-width: 1400px;
+    min-height: 85px;
+    margin: 70px auto 0;
+    padding: 24px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid #FFFFFF;
+
+    color: #FFFFFF;
+
+    font-size: 25px;
+    letter-spacing: 1px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.pulsante-canale:hover {
+    background: #FFFFFF;
+    color: var(--brainframe-blu);
+
+    transform: translateY(-5px);
+}
+
+
+/* ==================================================
+   CARD VIDEO SU TABLET E SMARTPHONE
+   ================================================== */
+
+@media (max-width: 900px) {
+
+    .lavori-progetto {
+        padding: 85px 20px;
+    }
+
+    .intestazione-lavori {
+        margin-bottom: 55px;
+
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .descrizione-lavori {
+        font-size: 25px;
+    }
+
+    .griglia-video {
+        gap: 35px;
+    }
+
+    .card-video {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+    .card-video:nth-child(even)
+    .card-video-immagine {
+        order: 1;
+    }
+
+    .card-video:nth-child(even)
+    .card-video-informazioni {
+        order: 2;
+    }
+
+    .card-video-immagine {
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .card-video-informazioni {
+        padding: 30px 25px;
+        gap: 35px;
+    }
+
+    .card-video-informazioni h3 {
+        font-size: clamp(38px, 11vw, 58px);
+    }
+
+    .ruoli-video span {
+        font-size: 17px;
+    }
+
+    .numero-video {
+        top: 18px;
+        left: 20px;
+    }
+
+    .freccia-video {
+        right: 18px;
+        bottom: 18px;
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 23px;
+    }
+
+    .pulsante-canale {
+        min-height: 75px;
+        margin-top: 50px;
+
+        font-size: 21px;
+    }
+}
+
+
+/* Dispositivi senza mouse */
+
+@media (hover: none) {
+
+    .card-video:hover,
+    .card-video:nth-child(even):hover {
+        transform: none;
+    }
+
+    .card-video:hover .card-video-immagine img {
+        transform: none;
+    }
+}
+
+
+/* Accessibilità */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card-video,
+    .card-video-immagine img,
+    .freccia-video,
+    .pulsante-canale {
+        transition: none;
+    }
+}
