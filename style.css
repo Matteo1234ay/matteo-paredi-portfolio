@@ -2325,3 +2325,456 @@ nav a {
         font-size: 19px;
     }
 }
+/* ==================================================
+   SEZIONE PAGNOTTAPAZZA
+   ================================================== */
+
+.pagnottapazza {
+    position: relative;
+
+    min-height: 85vh;
+    padding: 100px 7%;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(360px, 0.9fr);
+
+    align-items: center;
+    gap: clamp(60px, 8vw, 140px);
+
+    background: #63313F;
+    color: #FFF1D5;
+
+    overflow: hidden;
+}
+
+
+/* Contenuto testuale */
+
+.pagnottapazza-contenuto {
+    position: relative;
+    z-index: 3;
+
+    max-width: 780px;
+}
+
+.etichetta-pagnottapazza {
+    margin: 0 0 25px;
+
+    color: #D6B36A;
+
+    font-family:
+        "Arial Rounded MT Bold",
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pagnottapazza h2 {
+    margin: 0;
+
+    color: #FFF1D5;
+
+    font-family:
+        "Arial Rounded MT Bold",
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: clamp(60px, 7vw, 115px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+}
+
+.descrizione-pagnottapazza {
+    max-width: 690px;
+    margin: 38px 0;
+
+    color: #FFF1D5;
+
+    font-family:
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+
+/* Risultati */
+
+.risultati-pagnottapazza {
+    margin: 45px 0 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.risultato-pagnottapazza {
+    padding: 24px;
+
+    background: #FFF1D5;
+    color: #63313F;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(54, 16, 29, 0.22);
+}
+
+.risultato-pagnottapazza strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-family:
+        "Arial Rounded MT Bold",
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: clamp(38px, 4vw, 62px);
+    line-height: 1;
+}
+
+.risultato-pagnottapazza span {
+    display: block;
+
+    font-family:
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+
+/* Competenze */
+
+.ruoli-pagnottapazza {
+    margin-bottom: 38px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ruoli-pagnottapazza span {
+    padding: 10px 14px;
+
+    border:
+        1px solid
+        rgba(255, 241, 213, 0.55);
+
+    border-radius: 999px;
+
+    font-family:
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: 15px;
+}
+
+
+/* Pulsante Instagram */
+
+.pulsante-pagnottapazza {
+    width: min(100%, 340px);
+    padding: 20px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #D97816;
+    color: #FFF1D5;
+
+    border-radius: 14px;
+
+    font-family:
+        "Arial Rounded MT Bold",
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    box-shadow:
+        0 18px 45px
+        rgba(54, 16, 29, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.pulsante-pagnottapazza:hover {
+    background: #FFF1D5;
+    color: #63313F;
+
+    transform: translateY(-5px);
+}
+
+
+/* ==================================================
+   PARTE VISIVA PAGNOTTAPAZZA
+   ================================================== */
+
+.pagnottapazza-visual {
+    position: relative;
+
+    width: min(100%, 570px);
+    aspect-ratio: 1;
+
+    justify-self: center;
+}
+
+.forma-pagnottapazza {
+    position: absolute;
+    inset: 7% -5% -4% 8%;
+
+    background: #D97816;
+
+    border-radius:
+        42% 58% 62% 38%
+        / 48% 42% 58% 52%;
+
+    transform: rotate(8deg);
+
+    box-shadow:
+        0 35px 80px
+        rgba(54, 16, 29, 0.3);
+
+    transition:
+        transform
+        0.7s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+.logo-pagnottapazza {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 30px 70px
+        rgba(54, 16, 29, 0.3);
+
+    transition:
+        transform
+        0.8s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+.nota-pagnottapazza {
+    position: absolute;
+    right: -25px;
+    bottom: 35px;
+    z-index: 4;
+
+    margin: 0;
+    padding: 14px 18px;
+
+    background: #4D2230;
+    color: #FFF1D5;
+
+    border-radius: 12px;
+
+    font-family:
+        "Arial Rounded MT Bold",
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+/* Movimento al passaggio del mouse */
+
+.pagnottapazza-visual:hover
+.logo-pagnottapazza {
+    transform:
+        translateY(-10px)
+        rotate(-3deg)
+        scale(1.02);
+}
+
+.pagnottapazza-visual:hover
+.forma-pagnottapazza {
+    transform:
+        translate(12px, 10px)
+        rotate(13deg);
+}
+
+
+/* ==================================================
+   ANIMAZIONE D'INGRESSO PAGNOTTAPAZZA
+   ================================================== */
+
+.animazioni-attive
+.pagnottapazza
+.pagnottapazza-contenuto > * {
+    opacity: 0;
+    transform: translateY(45px);
+}
+
+.animazioni-attive
+.pagnottapazza
+.pagnottapazza-visual {
+    opacity: 0;
+
+    transform:
+        translateX(130px)
+        rotate(8deg)
+        scale(0.82);
+}
+
+.animazioni-attive
+.pagnottapazza.in-vista
+.pagnottapazza-contenuto > * {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.9s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+.animazioni-attive
+.pagnottapazza.in-vista
+.pagnottapazza-contenuto > *:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.animazioni-attive
+.pagnottapazza.in-vista
+.pagnottapazza-contenuto > *:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.animazioni-attive
+.pagnottapazza.in-vista
+.pagnottapazza-contenuto > *:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.animazioni-attive
+.pagnottapazza.in-vista
+.pagnottapazza-contenuto > *:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.animazioni-attive
+.pagnottapazza.in-vista
+.pagnottapazza-contenuto > *:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.animazioni-attive
+.pagnottapazza.in-vista
+.pagnottapazza-contenuto > *:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.animazioni-attive
+.pagnottapazza.in-vista
+.pagnottapazza-visual {
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        rotate(0)
+        scale(1);
+
+    transition:
+        opacity 0.9s 0.2s ease,
+        transform 1.2s 0.2s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* ==================================================
+   PAGNOTTAPAZZA SU SMARTPHONE
+   ================================================== */
+
+@media (max-width: 800px) {
+
+    .pagnottapazza {
+        min-height: auto;
+        padding: 85px 20px;
+
+        grid-template-columns: 1fr;
+        gap: 65px;
+    }
+
+    .pagnottapazza h2 {
+        font-size: clamp(48px, 14vw, 70px);
+        letter-spacing: -3px;
+    }
+
+    .descrizione-pagnottapazza {
+        font-size: 20px;
+        line-height: 1.45;
+    }
+
+    .risultati-pagnottapazza {
+        grid-template-columns: 1fr;
+    }
+
+    .risultato-pagnottapazza strong {
+        font-size: 45px;
+    }
+
+    .pulsante-pagnottapazza {
+        width: 100%;
+    }
+
+    .pagnottapazza-visual {
+        width: min(86vw, 450px);
+    }
+
+    .nota-pagnottapazza {
+        right: -5px;
+        bottom: 20px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* Accessibilità */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .animazioni-attive
+    .pagnottapazza
+    .pagnottapazza-contenuto > *,
+    .animazioni-attive
+    .pagnottapazza
+    .pagnottapazza-visual {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .logo-pagnottapazza,
+    .forma-pagnottapazza {
+        transition: none;
+    }
+}
