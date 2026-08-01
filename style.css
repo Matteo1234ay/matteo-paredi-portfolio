@@ -3292,3 +3292,50 @@ nav a {
         white-space: nowrap;
     }
 }
+/* FIX CONTATTI SU SMARTPHONE */
+
+@media (max-width: 900px) {
+
+    .contatti {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .contatti-contenuto,
+    .contatti-testo,
+    .contatti-link {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contatti-testo h2 {
+        width: max-content;
+        max-width: 100%;
+        margin-bottom: 35px;
+
+        font-size: clamp(38px, 10.5vw, 52px);
+        line-height: 1;
+        letter-spacing: -1px;
+
+        white-space: nowrap;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .contatti-testo p {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .contatti-link a {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contatti-link strong {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
