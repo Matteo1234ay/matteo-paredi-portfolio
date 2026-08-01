@@ -899,3 +899,36 @@ h1 {
 }
 
 .animazioni-attive .
+/* Dimensioni definitive collage BrainFrame su desktop */
+
+@media (min-width: 701px) {
+
+    .composizione-brainframe {
+        height: 570px;
+    }
+
+    .immagine-banner {
+        top: 20px;
+        right: -12%;
+
+        width: 115%;
+        max-width: none;
+        max-height: none;
+    }
+
+    .logo-cognitive {
+        bottom: 0;
+        left: -2%;
+
+        width: 62%;
+        max-width: none;
+    }
+
+    .logo-blu {
+        right: -5%;
+        bottom: -5px;
+
+        width: 52%;
+        max-width: none;
+    }
+}
