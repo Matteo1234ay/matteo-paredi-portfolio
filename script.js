@@ -35,6 +35,9 @@ osservaElemento(".introduzione-progetto", 0.25);
 
 osservaElemento(".brainframe", 0.2);
 
+/* Sezione Pagnottapazza nella home */
+
+osservaElemento(".pagnottapazza", 0.2);
 
 /* Card dei lavori YouTube */
 
