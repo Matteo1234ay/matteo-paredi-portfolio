@@ -1,7 +1,14 @@
+/* ==================================================
+   VARIABILI E IMPOSTAZIONI GENERALI
+   ================================================== */
+
 :root {
     --blu-scuro: #10002F;
     --arancione: #FF5B19;
     --bianco: #F5F0E7;
+
+    --brainframe-blu: #17006B;
+    --brainframe-bianco: #FFFFFF;
 }
 
 * {
@@ -14,9 +21,15 @@ html {
 
 body {
     margin: 0;
+
     background-color: var(--blu-scuro);
     color: var(--bianco);
+
     font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
@@ -24,15 +37,18 @@ a {
     text-decoration: none;
 }
 
-/* MENU */
+
+/* ==================================================
+   MENU DEL PORTFOLIO
+   ================================================== */
 
 .menu {
+    width: 100%;
+    padding: 32px 5%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    width: 100%;
-    padding: 32px 5%;
 }
 
 .nome {
@@ -51,7 +67,10 @@ nav a {
     font-size: 15px;
 }
 
-/* PRIMA SCHERMATA */
+
+/* ==================================================
+   PRIMA SCHERMATA DEL PORTFOLIO
+   ================================================== */
 
 .hero {
     min-height: calc(100vh - 85px);
@@ -64,13 +83,14 @@ nav a {
 
 .posizione {
     margin: 0 0 45px;
+
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-h1 {
+.hero h1 {
     max-width: 1100px;
     margin: 0;
 
@@ -89,15 +109,16 @@ h1 {
 }
 
 .competenze {
+    margin: 40px 0;
+
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-
-    margin: 40px 0;
 }
 
 .competenze span {
     padding: 10px 16px;
+
     border: 1px solid rgba(245, 240, 231, 0.5);
 }
 
@@ -110,7 +131,7 @@ h1 {
     align-items: center;
 
     background-color: var(--arancione);
-    color: white;
+    color: #FFFFFF;
 
     font-size: 17px;
     font-weight: bold;
@@ -121,7 +142,11 @@ h1 {
 .pulsante:hover {
     transform: translateY(-4px);
 }
-/* SEZIONE BRAINFRAME */
+
+
+/* ==================================================
+   ANTEPRIMA BRAINFRAME NEL PORTFOLIO
+   ================================================== */
 
 .brainframe {
     min-height: 100vh;
@@ -131,12 +156,15 @@ h1 {
     grid-template-columns: 60% 40%;
     align-items: stretch;
 
-    background-image: url("assets/Sito/brainframe-background.png");
+    background-image:
+        url("assets/Sito/brainframe-background.png");
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 
     color: #160064;
+
     font-family: "Oswald", sans-serif;
 }
 
@@ -147,7 +175,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
 
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
 .etichetta {
@@ -164,7 +192,9 @@ h1 {
 .brainframe h2 {
     margin: 0;
 
+    font-family: "Oswald", sans-serif;
     font-size: clamp(70px, 8vw, 135px);
+    font-weight: 600;
     line-height: 0.9;
     letter-spacing: -7px;
 }
@@ -179,11 +209,11 @@ h1 {
 }
 
 .informazioni-brainframe {
+    margin-bottom: 50px;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-
-    margin-bottom: 50px;
 }
 
 .informazioni-brainframe span {
@@ -191,6 +221,7 @@ h1 {
     margin-bottom: 8px;
 
     color: #6A6090;
+
     font-size: 13px;
 }
 
@@ -199,6 +230,14 @@ h1 {
 
     font-size: 16px;
     line-height: 1.5;
+}
+
+.etichetta,
+.descrizione-brainframe,
+.informazioni-brainframe,
+.pulsante-brainframe {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
 }
 
 .pulsante-brainframe {
@@ -210,9 +249,10 @@ h1 {
     align-items: center;
 
     background-color: #160064;
-    color: white;
+    color: #FFFFFF;
 
     font-weight: bold;
+
     transition: transform 0.2s ease;
 }
 
@@ -228,6 +268,7 @@ h1 {
     justify-content: center;
 
     background-color: #160064;
+
     overflow: hidden;
 }
 
@@ -238,19 +279,11 @@ h1 {
     display: block;
     object-fit: cover;
 }
-.brainframe h2 {
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-}
 
-.etichetta,
-.descrizione-brainframe,
-.informazioni-brainframe,
-.pulsante-brainframe {
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 1px;
-}
-/* SMARTPHONE */
+
+/* ==================================================
+   HOME DEL PORTFOLIO SU SMARTPHONE
+   ================================================== */
 
 @media (max-width: 700px) {
 
@@ -272,10 +305,15 @@ h1 {
     }
 
     .hero {
+        min-height: auto;
         padding: 70px 20px 50px;
     }
 
-    h1 {
+    .posizione {
+        margin-bottom: 45px;
+    }
+
+    .hero h1 {
         font-size: 52px;
         letter-spacing: -3px;
     }
@@ -283,7 +321,10 @@ h1 {
     .introduzione {
         font-size: 20px;
     }
-        /* BRAINFRAME SU SMARTPHONE */
+
+    .pulsante {
+        width: 100%;
+    }
 
     .brainframe {
         min-height: auto;
@@ -301,6 +342,7 @@ h1 {
 
     .etichetta {
         margin-bottom: 20px;
+
         font-size: 18px;
         line-height: 1.2;
     }
@@ -320,10 +362,10 @@ h1 {
     }
 
     .informazioni-brainframe {
+        margin-bottom: 35px;
+
         grid-template-columns: 1fr;
         gap: 25px;
-
-        margin-bottom: 35px;
     }
 
     .informazioni-brainframe span {
@@ -342,28 +384,38 @@ h1 {
     .brainframe-logo {
         width: 100%;
         min-height: auto;
+
         aspect-ratio: 4 / 5;
     }
 
     .brainframe-logo img {
         width: 100%;
         height: 100%;
+
         object-fit: contain;
     }
 }
+
+
 /* ==================================================
    PAGINA DEDICATA A BRAINFRAME
    ================================================== */
 
 .pagina-brainframe {
     margin: 0;
-    background: #ffffff;
-    color: #17006b;
+
+    background: var(--brainframe-bianco);
+    color: var(--brainframe-blu);
+
     font-family: "Bebas Neue", sans-serif;
+
     overflow-x: hidden;
 }
 
-/* Menu superiore */
+
+/* ==================================================
+   MENU DELLA PAGINA BRAINFRAME
+   ================================================== */
 
 .menu-progetto {
     position: absolute;
@@ -371,7 +423,6 @@ h1 {
     left: 0;
     z-index: 20;
 
-    box-sizing: border-box;
     width: 100%;
     padding: 30px 5%;
 
@@ -389,23 +440,25 @@ h1 {
     gap: 10px;
     align-items: center;
 
-    color: #17006b;
-    text-decoration: none;
+    color: var(--brainframe-blu);
 }
 
 .nome-progetto {
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 
-/* Prima schermata */
+/* ==================================================
+   PRIMA SCHERMATA DELLA PAGINA BRAINFRAME
+   ================================================== */
 
 .hero-progetto {
     position: relative;
+
     min-height: 100vh;
     padding: 150px 7% 80px;
 
-    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
@@ -423,6 +476,7 @@ h1 {
 
 .hero-progetto-sfondo::after {
     content: "";
+
     position: absolute;
     inset: 0;
 
@@ -432,14 +486,21 @@ h1 {
 .hero-progetto-sfondo img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 
-    animation: movimentoSfondo 12s ease-in-out infinite alternate;
+    animation:
+        movimentoSfondo
+        12s
+        ease-in-out
+        infinite
+        alternate;
 }
 
 .hero-progetto-contenuto {
     position: relative;
     z-index: 2;
+
     max-width: 760px;
 }
 
@@ -461,7 +522,11 @@ h1 {
     line-height: 0.85;
     letter-spacing: -5px;
 
-    animation: ingressoTitolo 1s cubic-bezier(.22, 1, .36, 1) both;
+    animation:
+        ingressoTitolo
+        1s
+        cubic-bezier(.22, 1, .36, 1)
+        both;
 }
 
 .presentazione-progetto {
@@ -472,11 +537,15 @@ h1 {
     line-height: 1.1;
     letter-spacing: 1px;
 
-    animation: ingressoTesto 1s 0.25s ease both;
+    animation:
+        ingressoTesto
+        1s
+        0.25s
+        ease
+        both;
 }
 
 .pulsante-lavori {
-    box-sizing: border-box;
     width: fit-content;
     min-width: 230px;
     padding: 20px 24px;
@@ -485,13 +554,19 @@ h1 {
     justify-content: space-between;
     gap: 40px;
 
-    background: #17006b;
-    color: #ffffff;
-    text-decoration: none;
+    background: var(--brainframe-blu);
+    color: var(--brainframe-bianco);
+
     font-size: 22px;
     letter-spacing: 1px;
 
-    animation: ingressoTesto 1s 0.45s ease both;
+    animation:
+        ingressoTesto
+        1s
+        0.45s
+        ease
+        both;
+
     transition:
         background-color 0.3s ease,
         color 0.3s ease,
@@ -499,36 +574,51 @@ h1 {
 }
 
 .pulsante-lavori:hover {
-    background: #ffffff;
-    color: #17006b;
+    background: var(--brainframe-bianco);
+    color: var(--brainframe-blu);
+
     transform: translateY(-5px);
 }
 
 
-/* Logo animato */
+/* Logo della prima schermata */
 
 .hero-progetto-logo {
     position: relative;
     z-index: 2;
+
     justify-self: end;
 
     width: min(36vw, 500px);
     aspect-ratio: 1;
+
     overflow: hidden;
 
     border-radius: 50%;
-    box-shadow: 0 30px 70px rgba(23, 0, 107, 0.25);
 
-    animation: ingressoLogo 1.3s 0.2s cubic-bezier(.22, 1, .36, 1) both;
+    box-shadow:
+        0 30px 70px
+        rgba(23, 0, 107, 0.25);
+
+    animation:
+        ingressoLogo
+        1.3s
+        0.2s
+        cubic-bezier(.22, 1, .36, 1)
+        both;
 }
 
 .hero-progetto-logo img {
     width: 100%;
     height: 100%;
+
     display: block;
     object-fit: cover;
 
-    transition: transform 0.7s cubic-bezier(.22, 1, .36, 1);
+    transition:
+        transform
+        0.7s
+        cubic-bezier(.22, 1, .36, 1);
 }
 
 .hero-progetto-logo:hover img {
@@ -536,35 +626,36 @@ h1 {
 }
 
 
-/* Sezioni informative */
+/* ==================================================
+   SEZIONI INFORMATIVE DELLA PAGINA
+   ================================================== */
 
 .introduzione-progetto,
 .ruolo-progetto,
 .lavori-progetto {
-    box-sizing: border-box;
     min-height: 75vh;
     padding: 100px 7%;
 
     display: grid;
     grid-template-columns: 120px minmax(0, 850px);
     justify-content: center;
-    gap: 60px;
     align-items: start;
+    gap: 60px;
 }
 
 .introduzione-progetto {
-    background: #17006b;
-    color: #ffffff;
+    background: var(--brainframe-blu);
+    color: var(--brainframe-bianco);
 }
 
 .ruolo-progetto {
-    background: #ffffff;
-    color: #17006b;
+    background: var(--brainframe-bianco);
+    color: var(--brainframe-blu);
 }
 
 .lavori-progetto {
-    background: #17006b;
-    color: #ffffff;
+    background: var(--brainframe-blu);
+    color: var(--brainframe-bianco);
 }
 
 .numero-sezione {
@@ -597,9 +688,205 @@ h1 {
 }
 
 
-/* Animazioni iniziali */
+/* ==================================================
+   COMPOSIZIONE GRAFICA DELLA SEZIONE 01
+   ================================================== */
+
+.introduzione-progetto {
+    min-height: auto;
+    padding: 90px 5%;
+
+    grid-template-columns:
+        70px
+        minmax(420px, 0.9fr)
+        minmax(460px, 0.8fr);
+
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    overflow: hidden;
+}
+
+.testo-introduzione {
+    position: relative;
+    z-index: 3;
+}
+
+.composizione-brainframe {
+    position: relative;
+
+    width: 100%;
+    height: 620px;
+
+    align-self: center;
+}
+
+.composizione-brainframe img {
+    position: absolute;
+
+    display: block;
+    object-fit: cover;
+
+    opacity: 1;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.3);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1.1s cubic-bezier(.22, 1, .36, 1),
+        box-shadow 0.5s ease;
+}
+
+
+/* Posizioni finali */
+
+.immagine-banner {
+    top: 25px;
+    right: -12%;
+
+    width: 112%;
+    aspect-ratio: 16 / 9;
+
+    transform: rotate(5deg);
+}
+
+.logo-cognitive {
+    bottom: 10px;
+    left: -2%;
+
+    width: 57%;
+    aspect-ratio: 1;
+
+    transform: rotate(-7deg);
+}
+
+.logo-blu {
+    right: -4%;
+    bottom: 0;
+
+    width: 49%;
+    aspect-ratio: 1;
+
+    transform: rotate(8deg);
+}
+
+
+/* ==================================================
+   ANIMAZIONI ALLO SCORRIMENTO
+   ================================================== */
+
+.animazioni-attive .composizione-brainframe img {
+    opacity: 0;
+}
+
+.animazioni-attive .immagine-banner {
+    transform:
+        translateX(180px)
+        rotate(14deg)
+        scale(0.88);
+}
+
+.animazioni-attive .logo-cognitive {
+    transform:
+        translate(-120px, 100px)
+        rotate(-18deg)
+        scale(0.78);
+}
+
+.animazioni-attive .logo-blu {
+    transform:
+        translate(120px, 110px)
+        rotate(18deg)
+        scale(0.78);
+}
+
+.animazioni-attive
+.introduzione-progetto.in-vista
+.immagine-banner {
+    opacity: 1;
+
+    transform:
+        translate(0, 0)
+        rotate(5deg)
+        scale(1);
+
+    transition-delay: 0.1s;
+}
+
+.animazioni-attive
+.introduzione-progetto.in-vista
+.logo-cognitive {
+    opacity: 1;
+
+    transform:
+        translate(0, 0)
+        rotate(-7deg)
+        scale(1);
+
+    transition-delay: 0.3s;
+}
+
+.animazioni-attive
+.introduzione-progetto.in-vista
+.logo-blu {
+    opacity: 1;
+
+    transform:
+        translate(0, 0)
+        rotate(8deg)
+        scale(1);
+
+    transition-delay: 0.5s;
+}
+
+
+/* Animazione al passaggio del mouse */
+
+.introduzione-progetto.in-vista
+.composizione-brainframe:hover
+.immagine-banner {
+    transform:
+        translateY(-12px)
+        rotate(2deg)
+        scale(1.02);
+}
+
+.introduzione-progetto.in-vista
+.composizione-brainframe:hover
+.logo-cognitive {
+    transform:
+        translate(-10px, 8px)
+        rotate(-3deg)
+        scale(1.03);
+}
+
+.introduzione-progetto.in-vista
+.composizione-brainframe:hover
+.logo-blu {
+    transform:
+        translate(12px, -12px)
+        rotate(3deg)
+        scale(1.03);
+}
+
+.composizione-brainframe img:hover {
+    z-index: 5;
+
+    box-shadow:
+        0 35px 80px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+/* ==================================================
+   ANIMAZIONI INIZIALI
+   ================================================== */
 
 @keyframes ingressoTitolo {
+
     from {
         opacity: 0;
         transform: translateY(100px);
@@ -612,6 +899,7 @@ h1 {
 }
 
 @keyframes ingressoTesto {
+
     from {
         opacity: 0;
         transform: translateY(40px);
@@ -624,18 +912,28 @@ h1 {
 }
 
 @keyframes ingressoLogo {
+
     from {
         opacity: 0;
-        transform: translateX(150px) rotate(20deg) scale(0.7);
+
+        transform:
+            translateX(150px)
+            rotate(20deg)
+            scale(0.7);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0) rotate(0) scale(1);
+
+        transform:
+            translateX(0)
+            rotate(0)
+            scale(1);
     }
 }
 
 @keyframes movimentoSfondo {
+
     from {
         transform: scale(1);
     }
@@ -646,12 +944,38 @@ h1 {
 }
 
 
-/* Pagina BrainFrame su smartphone */
+/* ==================================================
+   PAGINA BRAINFRAME SU TABLET
+   ================================================== */
+
+@media (max-width: 1100px) {
+
+    .introduzione-progetto {
+        padding: 80px 5%;
+
+        grid-template-columns: 60px 1fr;
+        gap: 35px;
+    }
+
+    .composizione-brainframe {
+        grid-column: 1 / -1;
+
+        width: min(100%, 720px);
+        height: 570px;
+        margin: 20px auto 0;
+    }
+}
+
+
+/* ==================================================
+   PAGINA BRAINFRAME SU SMARTPHONE
+   ================================================== */
 
 @media (max-width: 700px) {
 
     .menu-progetto {
         padding: 24px 20px;
+
         font-size: 13px;
     }
 
@@ -674,6 +998,7 @@ h1 {
 
     .hero-progetto-logo {
         width: min(78vw, 360px);
+
         justify-self: center;
     }
 
@@ -698,10 +1023,63 @@ h1 {
     .lavori-progetto div > p:last-child {
         font-size: 25px;
     }
+
+    .composizione-brainframe {
+        grid-column: auto;
+
+        width: min(100%, 620px);
+        height: 470px;
+        margin: 30px auto 0;
+    }
+
+    .immagine-banner {
+        top: 0;
+        right: -8%;
+
+        width: 108%;
+    }
+
+    .logo-cognitive {
+        bottom: 5px;
+        left: -2%;
+
+        width: 58%;
+    }
+
+    .logo-blu {
+        right: -2%;
+        bottom: 10px;
+
+        width: 49%;
+    }
 }
 
 
-/* Accessibilità: disattiva il movimento se richiesto dal dispositivo */
+/* Smartphone molto piccoli */
+
+@media (max-width: 500px) {
+
+    .composizione-brainframe {
+        height: 420px;
+    }
+
+    .immagine-banner {
+        width: 110%;
+    }
+
+    .logo-cognitive {
+        width: 60%;
+    }
+
+    .logo-blu {
+        width: 51%;
+    }
+}
+
+
+/* ==================================================
+   ACCESSIBILITÀ
+   ================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -712,223 +1090,21 @@ h1 {
     .hero-progetto-logo {
         animation: none;
     }
-}
 
-    }
-}
-/* ==================================================
-   COMPOSIZIONE GRAFICA BRAINFRAME
-   ================================================== */
-
-.introduzione-progetto {
-    grid-template-columns: 80px minmax(320px, 0.9fr) minmax(320px, 0.7fr);
-    max-width: none;
-}
-
-.testo-introduzione {
-    position: relative;
-    z-index: 3;
-}
-
-.composizione-brainframe {
-    position: relative;
-    align-self: center;
-
-    width: 100%;
-    min-height: 650px;
-}
-
-.composizione-brainframe img {
-    position: absolute;
-    display: block;
-    object-fit: cover;
-
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-
-    transition:
-        transform 0.6s cubic-bezier(.22, 1, .36, 1),
-        box-shadow 0.6s ease;
-}
-
-.immagine-banner {
-    top: 5%;
-    right: -8%;
-
-    width: 95%;
-    aspect-ratio: 16 / 9;
-
-    transform: rotate(5deg);
-}
-
-.logo-cognitive {
-    bottom: 4%;
-    left: 0;
-
-    width: 58%;
-    aspect-ratio: 1;
-    
-    transform: rotate(-7deg);
-}
-
-.logo-blu {
-    right: 1%;
-    bottom: 0;
-
-    width: 43%;
-    aspect-ratio: 1;
-
-    transform: rotate(8deg);
-}
-
-.composizione-brainframe:hover .immagine-banner {
-    transform: rotate(2deg) translateY(-15px);
-}
-
-.composizione-brainframe:hover .logo-cognitive {
-    transform: rotate(-3deg) translate(-10px, 10px);
-}
-
-.composizione-brainframe:hover .logo-blu {
-    transform: rotate(3deg) translate(12px, -15px);
-}
-
-.composizione-brainframe img:hover {
-    z-index: 5;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
-}
-
-
-/* Composizione BrainFrame su smartphone */
-
-@media (max-width: 700px) {
-
-    .introduzione-progetto {
-        grid-template-columns: 1fr;
+    .animazioni-attive .composizione-brainframe img {
+        opacity: 1;
+        transition: none;
     }
 
-    .composizione-brainframe {
-        min-height: 470px;
-        margin-top: 30px;
+    .animazioni-attive .immagine-banner {
+        transform: rotate(5deg);
     }
 
-    .immagine-banner {
-        top: 0;
-        right: -10%;
-
-        width: 105%;
+    .animazioni-attive .logo-cognitive {
+        transform: rotate(-7deg);
     }
 
-    .logo-cognitive {
-        bottom: 2%;
-        left: -4%;
-
-        width: 58%;
-    }
-
-    .logo-blu {
-        right: -3%;
-        bottom: 5%;
-
-        width: 48%;
-    }
-}
-
-    .logo-blu {
-        right: -3%;
-        bottom: 5%;
-
-        width: 48%;
-    }
-}
-
-/* Correzione altezza composizione BrainFrame su desktop */
-
-@media (min-width: 701px) {
-
-    .introduzione-progetto {
-        min-height: auto;
-        padding-top: 90px;
-        padding-bottom: 90px;
-
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .composizione-brainframe {
-        width: 100%;
-        height: 520px;
-        min-height: 0;
-    }
-
-    .immagine-banner {
-        top: 30px;
-        right: 0;
-
-        width: 90%;
-        max-height: 290px;
-    }
-
-    .logo-cognitive {
-        bottom: 20px;
-        left: 5%;
-
-        width: 45%;
-        max-width: 260px;
-    }
-
-    .logo-blu {
-        right: 5%;
-        bottom: 10px;
-
-        width: 38%;
-        max-width: 220px;
-    }
-}
-/* Animazioni della composizione durante lo scorrimento */
-
-.animazioni-attive .composizione-brainframe img {
-    opacity: 0;
-}
-
-.animazioni-attive .immagine-banner {
-    transform: translateX(180px) rotate(14deg) scale(0.85);
-}
-
-.animazioni-attive .logo-cognitive {
-    transform: translate(-120px, 100px) rotate(-18deg) scale(0.75);
-}
-
-.animazioni-attive .
-/* Dimensioni definitive collage BrainFrame su desktop */
-
-@media (min-width: 701px) {
-
-    .composizione-brainframe {
-        height: 570px;
-    }
-
-    .immagine-banner {
-        top: 20px;
-        right: -12%;
-
-        width: 115%;
-        max-width: none;
-        max-height: none;
-    }
-
-    .logo-cognitive {
-        bottom: 0;
-        left: -2%;
-
-        width: 62%;
-        max-width: none;
-    }
-
-    .logo-blu {
-        right: -5%;
-        bottom: -5px;
-
-        width: 52%;
-        max-width: none;
+    .animazioni-attive .logo-blu {
+        transform: rotate(8deg);
     }
 }
