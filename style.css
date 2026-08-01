@@ -2258,3 +2258,70 @@ nav a {
         letter-spacing: 1.5px;
     }
 }
+/* ==================================================
+   LEGGIBILITÀ TESTI ANTEPRIMA BRAINFRAME
+   ================================================== */
+
+.descrizione-brainframe {
+    max-width: 680px;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.informazioni-brainframe {
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0;
+}
+
+.informazioni-brainframe span {
+    font-family: "Oswald", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.informazioni-brainframe strong {
+    font-family: "Oswald", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.pulsante-brainframe {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* Leggibilità su smartphone */
+
+@media (max-width: 700px) {
+
+    .descrizione-brainframe {
+        font-size: 20px;
+        line-height: 1.45;
+    }
+
+    .informazioni-brainframe span {
+        font-size: 12px;
+    }
+
+    .informazioni-brainframe strong {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .pulsante-brainframe {
+        font-size: 19px;
+    }
+}
