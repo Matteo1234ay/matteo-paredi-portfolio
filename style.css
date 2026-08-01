@@ -3196,3 +3196,23 @@ nav a {
         text-align: left;
     }
 }
+/* ALLINEAMENTO CONTATTI DESKTOP */
+
+@media (min-width: 901px) {
+
+    .contatti-contenuto {
+        align-items: start;
+        padding: 60px 0 80px;
+    }
+
+    .contatti-testo h2 {
+        font-size: clamp(90px, 8.7vw, 165px);
+        line-height: 0.86;
+        letter-spacing: -6px;
+        white-space: nowrap;
+    }
+
+    .contatti-link {
+        margin-top: 35px;
+    }
+}
