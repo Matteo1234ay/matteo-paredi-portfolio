@@ -3282,3 +3282,13 @@ nav a {
         margin-bottom: 70px;
     }
 }
+/* EVITA CHE IL REVEAL TAGLI PARLIAMONE */
+
+@media (min-width: 901px) {
+
+    .contatti-testo h2 {
+        width: max-content;
+        max-width: none;
+        white-space: nowrap;
+    }
+}
