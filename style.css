@@ -2999,3 +2999,10 @@ nav a {
         font-size: 18px;
     }
 }
+/* COLORE PIÙ EQUILIBRATO PER CHI SONO */
+
+.chi-sono {
+    background: #f3eadc;
+    color: #10002f;
+    border-top: 18px solid #ff5a1f;
+}
