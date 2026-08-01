@@ -3006,3 +3006,193 @@ nav a {
     color: #10002f;
     border-top: none;
 }
+/* ==================================================
+   CONTATTI
+================================================== */
+
+.contatti {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 100px max(7vw, 40px) 35px;
+    background: #10002f;
+    color: #f7f2e8;
+}
+
+.etichetta-contatti {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f06a3a;
+}
+
+.contatti-contenuto {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+    gap: clamp(60px, 10vw, 170px);
+    align-items: end;
+    flex: 1;
+    padding: 100px 0;
+}
+
+.contatti-testo h2 {
+    margin: 0 0 40px;
+    font-size: clamp(90px, 11vw, 210px);
+    line-height: 0.82;
+    letter-spacing: -7px;
+}
+
+.contatti-testo p {
+    max-width: 720px;
+    margin: 0;
+    font-size: clamp(21px, 1.7vw, 31px);
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.contatti-link {
+    border-top: 1px solid rgba(247, 242, 232, 0.4);
+}
+
+.contatti-link a {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr) auto;
+    gap: 20px;
+    align-items: center;
+    padding: 30px 0;
+    color: #f7f2e8;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(247, 242, 232, 0.4);
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+.contatti-link a:hover {
+    padding-left: 14px;
+    color: #f06a3a;
+}
+
+.contatti-link a > span:first-child {
+    font-family: "Oswald", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.contatti-link strong {
+    min-width: 0;
+    font-size: clamp(17px, 1.3vw, 22px);
+    overflow-wrap: anywhere;
+}
+
+.freccia-contatto {
+    font-size: 25px;
+}
+
+.footer-portfolio {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(247, 242, 232, 0.25);
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-portfolio span:nth-child(2) {
+    text-align: center;
+}
+
+.footer-portfolio span:last-child {
+    text-align: right;
+}
+
+
+/* ANIMAZIONE CONTATTI */
+
+.animazioni-attive .etichetta-contatti,
+.animazioni-attive .contatti-testo,
+.animazioni-attive .contatti-link {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animazioni-attive .contatti.in-vista .etichetta-contatti,
+.animazioni-attive .contatti.in-vista .contatti-testo,
+.animazioni-attive .contatti.in-vista .contatti-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animazioni-attive .contatti.in-vista .contatti-testo {
+    transition-delay: 0.12s;
+}
+
+.animazioni-attive .contatti.in-vista .contatti-link {
+    transition-delay: 0.24s;
+}
+
+
+/* CONTATTI SU SMARTPHONE */
+
+@media (max-width: 900px) {
+
+    .contatti {
+        min-height: auto;
+        padding: 80px 20px 30px;
+    }
+
+    .contatti-contenuto {
+        grid-template-columns: 1fr;
+        gap: 70px;
+        padding: 90px 0;
+    }
+
+    .contatti-testo h2 {
+        margin-bottom: 35px;
+        font-size: clamp(65px, 20vw, 100px);
+        line-height: 0.85;
+        letter-spacing: -4px;
+    }
+
+    .contatti-testo p {
+        font-size: 20px;
+    }
+
+    .contatti-link a {
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 25px 0;
+    }
+
+    .contatti-link a > span:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .contatti-link strong {
+        font-size: 17px;
+    }
+
+    .footer-portfolio {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .footer-portfolio span:nth-child(2),
+    .footer-portfolio span:last-child {
+        text-align: left;
+    }
+}
