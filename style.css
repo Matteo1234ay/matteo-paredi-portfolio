@@ -1570,3 +1570,436 @@ nav a {
         object-position: center;
     }
 }
+/* ==================================================
+   HERO DEL PORTFOLIO CON FOTOGRAFIA
+   ================================================== */
+
+.hero {
+    min-height: calc(100vh - 85px);
+    padding: 70px 5% 90px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(380px, 0.85fr);
+
+    align-items: center;
+    gap: clamp(50px, 6vw, 110px);
+
+    overflow: hidden;
+}
+
+.hero-testo {
+    position: relative;
+    z-index: 3;
+
+    min-width: 0;
+}
+
+
+/* Contenitore della fotografia */
+
+.ritratto-home {
+    position: relative;
+
+    width: min(100%, 560px);
+    height: clamp(520px, 68vh, 720px);
+
+    justify-self: end;
+}
+
+
+/* Forma arancione dietro la foto */
+
+.blocco-arancione {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+
+    width: 100%;
+    height: calc(100% - 20px);
+
+    background: var(--arancione);
+
+    transform: rotate(-4deg);
+
+    animation:
+        ingressoBloccoArancione
+        1.1s
+        0.15s
+        cubic-bezier(.22, 1, .36, 1)
+        both;
+}
+
+
+/* Fotografia */
+
+.foto-home {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    background: #1B0B48;
+
+    box-shadow:
+        0 35px 80px
+        rgba(0, 0, 0, 0.32);
+
+    animation:
+        ingressoFotoHome
+        1.2s
+        0.25s
+        cubic-bezier(.22, 1, .36, 1)
+        both;
+}
+
+.foto-home img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: 64% center;
+
+    transition:
+        transform
+        1s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* Etichetta sulla fotografia */
+
+.etichetta-foto {
+    position: absolute;
+    left: -25px;
+    bottom: 30px;
+    z-index: 4;
+
+    margin: 0;
+    padding: 14px 18px;
+
+    background: var(--bianco);
+    color: var(--blu-scuro);
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    animation:
+        ingressoEtichettaFoto
+        0.9s
+        0.75s
+        ease
+        both;
+}
+
+
+/* Movimento al passaggio del mouse */
+
+.ritratto-home:hover .foto-home img {
+    transform: scale(1.06);
+}
+
+.ritratto-home:hover .blocco-arancione {
+    transform: rotate(-2deg);
+}
+
+.blocco-arancione {
+    transition:
+        transform
+        0.7s
+        cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* ==================================================
+   ANIMAZIONI DEI TESTI DELLA HOME
+   ================================================== */
+
+.menu {
+    animation:
+        ingressoMenuHome
+        0.8s
+        ease
+        both;
+}
+
+.hero-testo .posizione {
+    animation:
+        ingressoTestoHome
+        0.8s
+        0.1s
+        ease
+        both;
+}
+
+.hero-testo h1 {
+    animation:
+        ingressoTitoloHome
+        1s
+        0.2s
+        cubic-bezier(.22, 1, .36, 1)
+        both;
+}
+
+.hero-testo .introduzione {
+    animation:
+        ingressoTestoHome
+        0.9s
+        0.4s
+        ease
+        both;
+}
+
+.hero-testo .competenze span {
+    animation:
+        ingressoCompetenza
+        0.7s
+        ease
+        both;
+}
+
+.hero-testo .competenze span:nth-child(1) {
+    animation-delay: 0.45s;
+}
+
+.hero-testo .competenze span:nth-child(2) {
+    animation-delay: 0.52s;
+}
+
+.hero-testo .competenze span:nth-child(3) {
+    animation-delay: 0.59s;
+}
+
+.hero-testo .competenze span:nth-child(4) {
+    animation-delay: 0.66s;
+}
+
+.hero-testo .competenze span:nth-child(5) {
+    animation-delay: 0.73s;
+}
+
+.hero-testo .pulsante {
+    animation:
+        ingressoTestoHome
+        0.8s
+        0.8s
+        ease
+        both;
+}
+
+
+/* ==================================================
+   KEYFRAME DELLA HOME
+   ================================================== */
+
+@keyframes ingressoMenuHome {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ingressoTitoloHome {
+
+    from {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ingressoTestoHome {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ingressoCompetenza {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes ingressoFotoHome {
+
+    from {
+        opacity: 0;
+
+        clip-path:
+            inset(0 100% 0 0);
+
+        transform:
+            translateX(90px)
+            rotate(3deg);
+    }
+
+    to {
+        opacity: 1;
+
+        clip-path:
+            inset(0 0 0 0);
+
+        transform:
+            translateX(0)
+            rotate(0);
+    }
+}
+
+@keyframes ingressoBloccoArancione {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translate(80px, 40px)
+            rotate(8deg)
+            scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translate(0, 0)
+            rotate(-4deg)
+            scale(1);
+    }
+}
+
+@keyframes ingressoEtichettaFoto {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ==================================================
+   HERO DEL PORTFOLIO SU TABLET
+   ================================================== */
+
+@media (max-width: 1050px) {
+
+    .hero {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(320px, 0.7fr);
+
+        gap: 45px;
+    }
+
+    .ritratto-home {
+        height: 570px;
+    }
+}
+
+
+/* ==================================================
+   HERO DEL PORTFOLIO SU SMARTPHONE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: auto;
+        padding: 70px 20px 90px;
+
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .hero-testo {
+        width: 100%;
+    }
+
+    .hero-testo h1 {
+        font-size: clamp(46px, 13vw, 58px);
+        line-height: 0.98;
+        letter-spacing: -3px;
+    }
+
+    .ritratto-home {
+        width: min(88vw, 430px);
+        height: min(112vw, 540px);
+        margin: 0 auto;
+
+        justify-self: center;
+    }
+
+    .blocco-arancione {
+        top: 24px;
+        right: 18px;
+    }
+
+    .etichetta-foto {
+        left: -8px;
+        bottom: 22px;
+
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .foto-home img {
+        object-position: 63% center;
+    }
+}
+
+
+/* ==================================================
+   ACCESSIBILITÀ DELLE ANIMAZIONI HOME
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .menu,
+    .hero-testo .posizione,
+    .hero-testo h1,
+    .hero-testo .introduzione,
+    .hero-testo .competenze span,
+    .hero-testo .pulsante,
+    .blocco-arancione,
+    .foto-home,
+    .etichetta-foto {
+        animation: none;
+    }
+
+    .foto-home img,
+    .blocco-arancione {
+        transition: none;
+    }
+}
