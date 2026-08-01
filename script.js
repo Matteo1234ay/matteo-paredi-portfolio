@@ -39,6 +39,8 @@ osservaElemento(".brainframe", 0.2);
 
 osservaElemento(".pagnottapazza", 0.2);
 
+osservaElemento(".chi-sono", 0.2);
+
 /* Card dei lavori YouTube */
 
 const cardsVideo = document.querySelectorAll(".card-video");
