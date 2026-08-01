@@ -3216,3 +3216,69 @@ nav a {
         margin-top: 35px;
     }
 }
+/* REVEAL "BOOM" DI PARLIAMONE */
+
+.animazioni-attive .contatti-testo h2 {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transform:
+        translateY(55px)
+        scale(0.78);
+    transform-origin: left center;
+}
+
+.animazioni-attive .contatti.in-vista .contatti-testo h2 {
+    animation: reveal-parliamone 1s
+        cubic-bezier(0.16, 1, 0.3, 1)
+        0.18s forwards;
+}
+
+@keyframes reveal-parliamone {
+
+    0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transform:
+            translateY(55px)
+            scale(0.78);
+    }
+
+    65% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform:
+            translateY(0)
+            scale(1.04);
+    }
+
+    100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+/* Rispetta le impostazioni di accessibilità */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .animazioni-attive .contatti-testo h2,
+    .animazioni-attive .contatti.in-vista .contatti-testo h2 {
+        opacity: 1;
+        clip-path: none;
+        transform: none;
+        animation: none;
+    }
+}
+/* CONTATTI IN BASSO A DESTRA */
+
+@media (min-width: 901px) {
+
+    .contatti-link {
+        align-self: end;
+        margin-top: 0;
+        margin-bottom: 70px;
+    }
+}
