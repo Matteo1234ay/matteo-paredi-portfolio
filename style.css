@@ -884,3 +884,18 @@ h1 {
         max-width: 220px;
     }
 }
+/* Animazioni della composizione durante lo scorrimento */
+
+.animazioni-attive .composizione-brainframe img {
+    opacity: 0;
+}
+
+.animazioni-attive .immagine-banner {
+    transform: translateX(180px) rotate(14deg) scale(0.85);
+}
+
+.animazioni-attive .logo-cognitive {
+    transform: translate(-120px, 100px) rotate(-18deg) scale(0.75);
+}
+
+.animazioni-attive .
